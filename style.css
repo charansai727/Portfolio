@@ -1,0 +1,231 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.columns-block {
+    display: flex;
+    min-height: 100vh;
+}
+
+.left-col-block {
+    width: 35%;
+    position: fixed;
+    height: 100vh;
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    color: #fff;
+}
+
+.right-col-block {
+    margin-left: 35%;
+    width: 65%;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+    height: 100%;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header h1 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.header .lead {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Social Icons */
+.social-icon {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon li a {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.social-icon li a:hover {
+    background: #fff;
+    color: #c33764;
+    transform: translateY(-4px);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.section-wrapper {
+    padding: 60px 50px;
+    background: #fff;
+}
+
+.grey-bg {
+    background: #f9fafc;
+}
+
+.section-title h2 {
+    font-weight: 700;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.section-title h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, #1d2671, #c33764);
+    display: block;
+    margin-top: 8px;
+}
+
+/* =========================
+   CARDS / EXPERTISE
+========================= */
+.expertise-item {
+    background: #fff;
+    padding: 25px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.expertise-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+}
+
+.expertise-item h3 {
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* =========================
+   SKILLS / PROGRESS
+========================= */
+label {
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+.progress {
+    height: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background: #e9ecef;
+}
+
+.progress-bar {
+    border-radius: 20px;
+    background: linear-gradient(to right, #1d2671, #c33764);
+    font-size: 10px;
+}
+
+/* =========================
+   ACCORDION
+========================= */
+.accordion-button {
+    font-weight: 500;
+}
+
+.accordion-button:not(.collapsed) {
+    background: linear-gradient(to right, #1d2671, #c33764);
+    color: #fff;
+}
+
+/* =========================
+   CAROUSEL
+========================= */
+.carousel img {
+    border-radius: 15px;
+}
+
+.carousel-caption {
+    background: rgba(0,0,0,0.6);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.carousel-caption h5 {
+    font-weight: 600;
+}
+
+/* =========================
+   CONTACT
+========================= */
+address {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+iframe {
+    border-radius: 15px;
+    width: 100%;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 991px) {
+    .columns-block {
+        flex-direction: column;
+    }
+
+    .left-col-block {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .right-col-block {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .section-wrapper {
+        padding: 40px 20px;
+    }
+}
